@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>  
+  <!-- Configurações básicas da página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assine ovos caipiras frescos com a Ovo di Onça. Entregas semanais, quinzenais ou avulsas com pentes de 30 ovos direto de Onça de Pitangui – qualidade, sabor e procedência garantida.">
+  <title>OVO di Onça | Assinatura de Ovos Frescos</title>
+  
+  <!-- Fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Meta Tags OpenGraph para compartilhamento -->
+<meta property="og:title" content="Ovo di Onça | Ovos Caipiras Frescos Direto da Fazenda">
+<meta property="og:description" content="Assine pentes de ovos caipiras frescos, entregues semanalmente, quinzenalmente ou mensalmente. Ovo di Onça - Sabor e qualidade direto da fazenda para sua mesa.">
+<meta property="og:image" content="https://ovodionca.com.br/imagens/ovos-caipiras-og.jpg">
+<meta property="og:url" content="https://ovodionca.com.br/">
+<meta property="og:type" content="website">
+
+
+  <style>
+  /* ==========================================================================
+  1. RESET E CONFIGURAÇÕES BASE
+  ========================================================================== */
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+:root {
+ /* Cores */
+ --cor-primaria: #2F4F46; /* Verde escuro */
+ --cor-secundaria: #5A786F; /* Verde médio */
+ --cor-destaque: #D29B32; /* Amarelo/Ouro */
+ --cor-destaque-hover: #E7BA63; /* Amarelo/Ouro claro */
+ --cor-fundo-claro: #FFFFFF; /* Branco */
+ --cor-fundo-alternativo: #F7F5ED; /* Bege claro */
+ --cor-texto-claro: #FFFFFF; /* Branco */
+ --cor-texto-escuro: var(--cor-primaria);
+ --cor-texto-secundario: var(--cor-secundaria);
+ --cor-borda: var(--cor-destaque);
+
+ /* Fontes */
+ --fonte-titulo: 'Aclonica', sans-serif;
+ --fonte-conteudo: 'Poppins', sans-serif;
+
+ /* Tamanhos de Fonte (usando rem para escalabilidade) */
+ --tamanho-base-fonte: 16px; /* 1rem */
+ --tamanho-fonte-h1: 1.75rem; /* 28px */
+ --tamanho-fonte-h2: 2rem; /* 32px */
+ --tamanho-fonte-h3: 1.125rem; /* 18px */
+ --tamanho-fonte-p: 1rem; /* 16px */
+ --tamanho-fonte-botao: 1rem; /* 16px */
+ --tamanho-fonte-faq-sumario: 1.125rem; /* 18px */
+ --tamanho-fonte-footer: 0.9375rem; /* 15px */
+
+ /* Espaçamentos (usando rem) */
+ --espacamento-xs: 0.5rem;  /* 8px */
+ --espacamento-s: 1rem;    /* 16px */
+ --espacamento-m: 1.25rem; /* 20px */
+ --espacamento-l: 1.875rem;/* 30px */
+ --espacamento-xl: 2.5rem; /* 40px */
+ --espacamento-xxl: 3.75rem;/* 60px */
+
+ /* Bordas */
+ --raio-borda-padrao: 8px;
+ --raio-borda-grande: 12px;
+}
+
+html {
+ font-size: var(--tamanho-base-fonte); /* Define a base para unidades rem */
+}
+
+body {
+ min-height: 100dvh; /* Garante altura mínima, mais flexível que height */
+ font-family: var(--fonte-conteudo);
+ background-color: var(--cor-fundo-claro);
+ color: var(--cor-texto-escuro);
+ display: flex;
+ flex-direction: column;
+ line-height: 1.6; /* Melhor legibilidade padrão */
+}
+
+/* ==========================================================================
+  2. CLASSES UTILITÁRIAS
+  ========================================================================== */
+
+.texto-principal {
+ color: var(--cor-texto-escuro);
+}
+.texto-secundario {
+ color: var(--cor-texto-secundario);
+}
+.fonte-titulo {
+ font-family: var(--fonte-titulo);
+}
+.fonte-conteudo {
+ font-family: var(--fonte-conteudo);
+}
+
+/* ==========================================================================
+  3. COMPONENTES GERAIS (Cabeçalho, Botões, Cards, etc.)
+  ========================================================================== */
+
+/* Cabeçalho (Navbar) */
+nav {
+ background-color: var(--cor-destaque);
+ padding: 1.75rem; /* 28px (aproximado com rem) */
+ text-align: center;
+}
+nav h1 {
+ font-family: var(--fonte-titulo);
+ color: var(--cor-texto-claro);
+ font-size: var(--tamanho-fonte-h1);
+}
+
+/* Títulos */
+h1, h2, h3 {
+   font-family: var(--fonte-titulo);
+   color: var(--cor-texto-escuro);
+   margin-top: var(--espacamento-l); /* Adiciona espaço acima */
+   margin-bottom: var(--espacamento-m); /* Espaçamento padrão abaixo dos títulos */
+   line-height: 1.3; /* Ajuste fino para títulos */
+}
+
+h2 {
+ font-size: var(--tamanho-fonte-h2);
+ text-align: center;
+ margin-left: var(--espacamento-xl);
+ margin-right: var(--espacamento-xl);
+}
+
+h3 {
+   font-size: var(--tamanho-fonte-h3);
+}
+
+/* Parágrafos */
+p {
+   font-size: var(--tamanho-fonte-p);
+   margin-bottom: var(--espacamento-m); /* Espaçamento padrão abaixo dos parágrafos */
+   text-align: justify;
+}
+
+/* Botões Gerais */
+.btn {
+ display: inline-flex;
+ align-items: center;
+ justify-content: center; /* Centraliza conteúdo do botão (texto/ícone) */
+ gap: var(--espacamento-xs); /* 8px */
+ background-color: var(--cor-destaque);
+ color: var(--cor-texto-claro);
+ padding: 0.75rem var(--espacamento-s); /* 12px 16px */
+ border-radius: var(--raio-borda-padrao);
+ text-decoration: none;
+ margin-top: var(--espacamento-s); /* 16px */
+ font-size: var(--tamanho-fonte-botao);
+ transition: background 0.3s ease; /* Adicionado ease para suavidade */
+ font-family: var(--fonte-conteudo);
+ border: none;
+ cursor: pointer;
+ font-weight: bold; /* Adicionado peso para melhor destaque */
+ text-align: center;
+}
+.btn:hover {
+ background-color: var(--cor-destaque-hover);
+}
+
+/* ==========================================================================
+  4. SEÇÕES ESPECÍFICAS
+  ========================================================================== */
+
+/* Conteúdo Principal */
+main {
+   flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço disponível */
+}
+
+/* Seções Gerais */
+section {
+ padding: var(--espacamento-l) var(--espacamento-m); /* 30px 20px */
+ max-width: 1000px;
+ margin-left: auto; /* Centraliza a seção */
+ margin-right: auto;
+ width: 90%; /* Garante algum espaçamento lateral em telas menores */
+}
+
+/* Seção Hero */
+.hero {
+ background-color: var(--cor-fundo-alternativo);
+ text-align: center;
+ padding: var(--espacamento-xl) var(--espacamento-m); /* 40px 20px */
+ width: 100%; /* Ocupa toda a largura */
+ max-width: none; /* Remove o max-width da section geral */
+ margin-bottom: var(--espacamento-xl); /* Adiciona espaço abaixo */
+ margin-top: 0; /* Remove margem do topo se for o primeiro elemento */
+}
+.hero h2 {
+ font-size: var(--tamanho-fonte-h2);
+ margin-top: 0; /* Remove margem do topo do H2 dentro do hero */
+ margin-bottom: var(--espacamento-s); /* Ajusta margem */
+}
+.hero p {
+ font-size: var(--tamanho-fonte-p);
+ color: var(--cor-texto-secundario);
+ text-align: center;
+ max-width: 600px;
+ margin: 0 auto var(--espacamento-m); /* Centraliza e adiciona margem inferior */
+}
+
+/* Propósito da marca */
+#proposito {
+  padding: var(--espacamento-l) var(--espacamento-m); /* 30px 20px */
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#proposito h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-texto-escuro);
+  font-size: var(--tamanho-fonte-h2);
+  text-align: center;
+  margin-left: var(--espacamento-xl);
+  margin-right: var(--espacamento-xl);
+  margin-top: var(--espacamento-l);
+  margin-bottom: var(--espacamento-m);
+  line-height: 1.3;
+}
+
+#proposito p {
+  font-family: var(--fonte-conteudo);
+  font-size: var(--tamanho-fonte-p);
+  color: var(--cor-texto-escuro);
+  margin-bottom: var(--espacamento-m);
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Melhorias adicionais se quiser destacar palavras específicas dentro do propósito */
+#proposito strong {
+  color: var(--cor-destaque);
+}
+
+#proposito em {
+  color: var(--cor-texto-secundario);
+  font-style: italic;
+}
+
+
+/* Simulador de Planos */
+#simulador-planos {
+ padding: var(--espacamento-xl) var(--espacamento-m); /* 40px 20px */
+ text-align: center;
+}
+#simulador-planos p {
+ font-size: var(--tamanho-fonte-p);
+ color: var(--cor-texto-secundario);
+ margin-bottom: var(--espacamento-l); /* 30px */
+}
+.btn-container {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: var(--espacamento-s); /* 16px */
+ margin-bottom: var(--espacamento-m); /* 20px */
+}
+.btn-container .btn {
+ border-radius: 10px; /* Mantido específico aqui */
+ padding: 12px 20px
+ 
+}
+
+/* Card de Informações */
+#info {
+ background-color: var(--cor-fundo-claro);
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda-grande);
+ padding: var(--espacamento-m); /* 20px */
+ max-width: 500px;
+ margin: var(--espacamento-xl) auto; /* Adiciona margem vertical */
+ font-size: var(--tamanho-fonte-p);
+ color: var(--cor-texto-escuro);
+ box-shadow: 0 0 10px rgba(0,0,0,0.05);
+ display: none; /* Mantém oculto por padrão */
+}
+
+/* CONTATOS */
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.contato-btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Seção de Dúvidas (FAQ) */
+.faq-section {
+   max-width: 800px;
+   margin: var(--espacamento-xl) auto; /* 40px auto */
+   padding: 0 var(--espacamento-m); /* Adiciona padding lateral */
+}
+details {
+   background: var(--cor-fundo-alternativo);
+   border: 1px solid var(--cor-borda);
+   border-radius: var(--raio-borda-padrao);
+   margin-bottom: var(--espacamento-s); /* 16px */
+   padding: var(--espacamento-s) var(--espacamento-m); /* 16px 20px */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   transition: background 0.3s ease;
+}
+summary {
+   font-weight: 600;
+   font-size: var(--tamanho-fonte-faq-sumario); /* 18px */
+   cursor: pointer;
+   outline: none;
+   color: var(--cor-texto-escuro);
+   list-style: none; /* Remove marcador padrão */
+   position: relative;
+   padding-right: 1.5rem; /* Espaço para o ícone */
+   display: flex; /* Para alinhar texto e ícone */
+   justify-content: space-between; /* Separa texto do ícone */
+   align-items: center;
+}
+/* Ícone indicador */
+summary::after {
+   content: '+';
+   font-size: 1.4em; /* Aumenta um pouco o ícone */
+   color: var(--cor-destaque);
+   transition: transform 0.3s ease;
+   flex-shrink: 0; /* Impede que o ícone encolha */
+   margin-left: var(--espacamento-xs);
+}
+details[open] summary::after {
+   content: '−';
+   transform: rotate(180deg); /* Gira o ícone */
+}
+summary::-webkit-details-marker { /* Remove marcador no Chrome/Safari */
+   display: none;
+}
+details[open] {
+   background: var(--cor-destaque-hover); /* Fundo quando aberto */
+   border-color: var(--cor-destaque); /* Mantém borda destaque */
+}
+details[open] summary {
+   color: var(--cor-texto-claro); /* Texto do sumário fica claro quando aberto */
+}
+details[open] summary::after {
+   color: var(--cor-texto-claro); /* Ícone fica claro quando aberto */
+}
+details .faq-content { /* Adiciona um container para o conteúdo */
+   padding-top: var(--espacamento-s); /* Espaço entre sumário e conteúdo */
+}
+details .faq-content p { /* Estilo específico para parágrafos dentro de details */
+   font-size: var(--tamanho-fonte-p);
+   line-height: 1.6;
+   color: var(--cor-texto-escuro); /* Garante cor do texto */
+   margin-bottom: var(--espacamento-s); /* Espaço entre parágrafos */
+   text-align: left; /* Alinha texto à esquerda */
+}
+details .faq-content p:last-child {
+   margin-bottom: 0; /* Remove margem do último parágrafo */
+}
+
+/* Seção de Receitas */
+#receitas {
+ text-align: center;
+}
+#receitas p {
+ font-size: var(--tamanho-fonte-p);
+ color: var(--cor-texto-secundario);
+ margin-bottom: var(--espacamento-l); /* 30px */
+ max-width: 700px; /* Limita largura do texto introdutório */
+ margin-left: auto;
+ margin-right: auto;
+}
+.receitas-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
+ gap: var(--espacamento-l); /* 30px */
+ justify-content: center;
+}
+.receita-card {
+ background: var(--cor-fundo-claro);
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda-grande);
+ padding: var(--espacamento-m); /* 20px */
+ box-shadow: 0 4px 10px rgba(0,0,0,0.07); /* Sombra um pouco mais pronunciada */
+ text-align: left;
+ display: flex;
+ flex-direction: column;
+ transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito ao passar o mouse */
+}
+.receita-card:hover {
+   transform: translateY(-5px); /* Leve elevação */
+   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+.receita-card img {
+ width: 100%;
+ height: 200px; /* Aumenta um pouco a altura da imagem */
+ object-fit: cover;
+ border-radius: var(--raio-borda-padrao);
+ margin-bottom: var(--espacamento-s); /* 16px */
+}
+.receita-card h3 {
+ font-size: var(--tamanho-fonte-h3); /* 18px */
+ margin-top: 0; /* Remove margem de cima do H3 */
+ margin-bottom: var(--espacamento-xs); /* 8px */
+ color: var(--cor-texto-escuro);
+ text-align: center; /* Centraliza apenas o título do card */
+}
+.receita-card p {
+   font-size: 0.95rem; /* Levemente menor para descrições */
+   color: var(--cor-texto-secundario);
+   margin-bottom: var(--espacamento-s);
+   flex-grow: 1; /* Faz o parágrafo ocupar o espaço restante */
+}
+.receita-card .btn {
+   margin-top: auto; /* Empurra o botão para baixo */
+   align-self: center; /* Centraliza o botão horizontalmente */
+}
+
+#receita-detalhe {
+ display: none; /* Mantém oculto por padrão */
+ max-width: 700px;
+ margin: var(--espacamento-xxl) auto; /* 60px auto */
+ background-color: #FFF9ED; /* Cor específica mantida */
+ border: 1px solid var(--cor-borda);
+ border-radius: var(--raio-borda-grande);
+ padding: var(--espacamento-xl); /* 40px */
+ text-align: justify;
+ box-shadow: 0 0 12px rgba(0,0,0,0.05);
+ font-family: var(--fonte-conteudo);
+ color: var(--cor-texto-escuro);
+}
+#receita-detalhe h3 {
+   text-align: center; /* Centraliza o título do detalhe */
+   font-size: 1.5rem; /* 24px */
+   margin-top: 0;
+}
+#receita-detalhe img { /* Estilo para imagem dentro do detalhe */
+   max-width: 100%;
+   height: auto;
+   border-radius: var(--raio-borda-padrao);
+   margin-bottom: var(--espacamento-m);
+   display: block; /* Para centralizar com margin auto se necessário */
+   margin-left: auto;
+   margin-right: auto;
+}
+#receita-detalhe ul,
+#receita-detalhe ol {
+   margin-left: var(--espacamento-m); /* Adiciona indentação para listas */
+   margin-bottom: var(--espacamento-m);
+   padding-left: var(--espacamento-m); /* Garante padding interno */
+}
+#receita-detalhe li {
+   margin-bottom: var(--espacamento-xs);
+}
+
+/* Animação de Fade-Out para fechar receita */
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+
+
+/* ==========================================================================
+  5. RODAPÉ
+  ========================================================================== */
+
+  /* Certifique-se de que as variáveis CSS (--cor-primaria, etc.) estão definidas
+   no seu :root ou em um elemento pai. */
+
+footer {
+  background-color: var(--cor-primaria, #333); /* Cor com fallback */
+  color: var(--cor-texto-claro, #f1f1f1);     /* Cor com fallback */
+  padding: var(--espacamento-xl, 40px) 5% var(--espacamento-m, 20px); /* Padding com fallbacks */
+  font-family: var(--fonte-conteudo, sans-serif); /* Fonte com fallback */
+  width: 100%;
+  flex-shrink: 0;   /* Impede que encolha (útil em layouts flex principais) */
+  margin-top: auto; /* Empurra para o final da página (útil em layouts flex principais) */
+  text-align: center; /* Alinhamento padrão para mobile */
+  box-sizing: border-box; /* Inclui padding e border na largura/altura */
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacamento-l, 30px); /* Gap entre colunas, com fallback */
+  justify-content: space-around; /* Distribui melhor com menos colunas */
+  text-align: left; /* Alinha texto à esquerda nas colunas (padrão desktop) */
+  max-width: 1200px; /* Limita a largura do conteúdo do grid */
+  margin: 0 auto var(--espacamento-l, 30px); /* Centraliza o grid e adiciona espaço antes do copy */
+}
+
+.footer-column {
+  flex: 1 1 200px; /* Permite que as colunas cresçam/encolham, base 200px */
+  min-width: 180px; /* Largura mínima antes de quebrar */
+  margin-bottom: var(--espacamento-m, 20px); /* Espaço entre linhas no mobile (fallback) */
+}
+
+.footer-column h4 {
+  color: var(--cor-destaque-hover, #ffffff); /* Cor com fallback */
+  margin-bottom: var(--espacamento-s, 15px); /* Espaçamento com fallback */
+  font-size: var(--tamanho-fonte-h3, 1.2em); /* Tamanho com fallback */
+  font-weight: 600; /* Um pouco mais de peso */
+}
+
+.footer-column p,
+.footer-column li { /* Aplica a parágrafos e itens de lista */
+  margin-bottom: var(--espacamento-xs, 8px); /* Espaçamento com fallback */
+  font-size: var(--tamanho-fonte-footer, 0.95em); /* Tamanho com fallback - ajustei ligeiramente */
+  color: var(--cor-texto-claro, #f1f1f1); /* Cor com fallback */
+  line-height: 1.6; /* Adicionado para melhor legibilidade */
+}
+
+.footer-column ul.contact-list { /* Especificidade para a lista de contatos */
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+/* ADICIONADO: Estilo para ícones na lista de contatos */
+.contact-list li {
+  display: flex; /* Alinha ícone e texto */
+  align-items: center; /* Centraliza verticalmente */
+  margin-bottom: var(--espacamento-xs, 8px); /* Mantém espaçamento consistente */
+}
+
+.contact-list i { /* Estilo para os ícones */
+  margin-right: var(--espacamento-xs, 8px); /* Espaço entre ícone e texto */
+  width: 1.2em; /* Largura fixa para alinhar ícones de diferentes larguras */
+  text-align: center; /* Centraliza o ícone em sua largura */
+  color: var(--cor-icone-footer, var(--cor-destaque-hover, #a7d7f9)); /* Cor do ícone com fallbacks */
+}
+
+.footer-column a {
+  color: var(--cor-link-footer, var(--cor-texto-claro, #a7d7f9)); /* Cor com fallbacks */
+  text-decoration: none;
+  display: inline-block; /* Permite hover em toda a área clicável */
+  padding: 2px 0; /* Pequeno padding para melhorar área de clique */
+  transition: color 0.3s ease; /* Transição suave apenas na cor */
+}
+
+.footer-column a:hover,
+.footer-column a:focus { /* Adicionado :focus para acessibilidade */
+  text-decoration: underline; /* Adiciona sublinhado no hover/focus */
+  color: var(--cor-destaque-hover, #ffffff); /* Cor no hover/focus com fallback */
+}
+
+/* ADICIONADO: Estilos para o mapa */
+.map-container { /* Contêiner adicionado no HTML aprimorado */
+   overflow: hidden; /* Garante que o iframe não ultrapasse os cantos arredondados */
+   border-radius: 8px; /* Raio da borda que estava inline */
+   line-height: 0; /* Remove espaço residual abaixo do iframe */
+   margin-top: var(--espacamento-s, 15px); /* Espaço acima do mapa (fallback) */
+}
+
+.footer-map { /* Classe aplicada ao iframe no HTML aprimorado */
+  border: 0; /* Remove borda que estava inline */
+  width: 100%;
+  height: 200px; /* Ou defina via variável se preferir */
+  vertical-align: middle; /* Ajuda a remover espaços */
+  display: block; /* Garante que o mapa ocupe a linha */
+}
+
+/* Ícones Sociais (Mantido, caso você adicione uma seção com esta classe) */
+.social-icons {
+  margin-top: var(--espacamento-s, 15px); /* Espaço acima dos ícones */
+  text-align: center; /* Centraliza os ícones se estiverem em uma coluna própria */
+}
+
+.social-icons a {
+  margin: 0 var(--espacamento-xs, 8px); /* Espaço entre ícones */
+  font-size: var(--tamanho-icone-social, 1.3rem); /* Tamanho com fallback (aprox 21px) */
+  display: inline-block; /* Garante que a margem funcione */
+  color: var(--cor-icone-social, var(--cor-texto-claro)); /* Cor dos ícones sociais */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adicionada transição de cor */
+}
+
+.social-icons a:hover,
+.social-icons a:focus { /* Adicionado :focus */
+  color: var(--cor-destaque-hover);
+  text-decoration: none; /* Remove sublinhado do hover para ícones */
+  transform: scale(1.1); /* Efeito de zoom leve */
+}
+
+/* Botões dentro do Rodapé */
+.footer-column .btn {
+  margin-top: var(--espacamento-s, 15px); /* fallback */
+  display: inline-block; /* Já definido na regra .btn geral, mas ok reforçar */
+  padding: var(--espacamento-botao-y, 10px) var(--espacamento-botao-x, 20px); /* Padding com variáveis/fallback */
+  /* Estilos como background, cor do texto, border-radius devem vir de uma regra .btn geral no seu CSS */
+  text-align: center;
+}
+
+/* UNIFICADO E CORRIGIDO: Seção de Copyright */
+.footer-copyright { /* Usando a classe do HTML */
+  margin-top: var(--espacamento-l, 30px);    /* Espaço acima da seção (era .footer-copy e footer-copyright) */
+  padding-top: var(--espacamento-m, 20px);   /* Espaçamento interno superior (era .footer-copy) */
+  border-top: 1px solid var(--cor-borda-footer, var(--cor-secundaria, #555)); /* Linha com fallbacks */
+  text-align: center;
+  font-size: var(--tamanho-fonte-copy, 0.875rem); /* Tamanho da fonte com fallback (14px) */
+  color: var(--cor-texto-copy, var(--cor-texto-secundario, #ccc)); /* Cor com fallbacks */
+  width: 100%; /* Garante que ocupe toda a largura abaixo do grid */
+}
+
+.footer-copyright p {
+    margin: 0; /* Remove margem padrão do parágrafo */
+}
+
+/* Removida a regra duplicada .footer-copy */
+
+/* Regras .contato-btns e .footer-column-contato mantidas caso sejam úteis para você */
+.contato-btns {
+  align-items: center; /* Pode ser útil se tiver múltiplos botões/elementos */
+}
+.footer-column-contato {
+  text-align: center; /* Se quiser centralizar o conteúdo de uma coluna específica */
+}
+/* ==========================================================================
+  6. RESPONSIVIDADE
+  ========================================================================== */
+
+/* Estilos base (Mobile) já estão definidos acima */
+
+/* Telas Maiores (Tablets) */
+@media (min-width: 600px) {
+ :root {
+     /* Pode ajustar variáveis aqui se necessário para telas maiores */
+     /* Ex: --tamanho-base-fonte: 17px; */
+ }
+ .hero h2 {
+   font-size: 2.25rem; /* 36px */
+ }
+ .hero p {
+   font-size: 1.1rem; /* ~17.6px */
+ }
+ .receitas-grid {
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Cards um pouco maiores */
+ }
+ section {
+     padding: var(--espacamento-xl) var(--espacamento-l); /* 40px 30px */
+ }
+ h2 {
+   margin-left: var(--espacamento-m); /* Reduz margem lateral em telas médias */
+   margin-right: var(--espacamento-m);
+ }
+}
+
+/* Telas Médias/Grandes (Desktop) */
+@media (min-width: 769px) {
+ .footer-grid {
+   text-align: left; /* Garante alinhamento esquerdo das colunas */
+ }
+ .footer-column {
+     text-align: left; /* Garante alinhamento esquerdo dentro das colunas */
+     margin-bottom: 0; /* Remove margem inferior entre colunas lado a lado */
+ }
+ /* Garante que a coluna de contato permaneça centralizada se a classe for usada */
+ .footer-column-contato {
+     text-align: center;
+ }
+ footer {
+     padding-left: 8%; /* Retorna padding original */
+     padding-right: 8%;
+ }
+}
+
+/* Telas Largas (Desktop Largo) */
+@media (min-width: 992px) {
+ .footer-grid {
+     gap: var(--espacamento-xl); /* Aumenta o espaço entre colunas */
+ }
+ /* Pode aumentar fontes ou espaçamentos aqui se necessário */
+ /* Ex: :root { --tamanho-base-fonte: 18px; } */
+}
+
+/* Ajustes específicos para telas pequenas (Sobrescreve se necessário) */
+@media (max-width: 600px) {
+ .hero h2 {
+   font-size: 1.75rem; /* Ajustado para ser um pouco maior que o H1 padrão */
+ }
+ .hero p {
+   font-size: var(--tamanho-fonte-p); /* Mantém 1rem */
+   padding: 0 var(--espacamento-xs);
+ }
+ h2 { /* Reduz margens laterais do h2 em telas pequenas */
+     margin-left: var(--espacamento-s);
+     margin-right: var(--espacamento-s);
+ }
+ section {
+     width: 95%; /* Aumenta um pouco a largura em telas muito pequenas */
+ }
+}
+</style>
+</head>
+<body>
+  <!-- Título da página -->
+  <nav>
+    <h1>OVO di Onça</h1>
+  </nav>
+    
+  <!-- Frase inicial de destaque -->
+  <div class="hero">
+    <h2>Ovos caipiras fresquinhos, direto da nossa fazenda pra sua mesa</h2>
+    <p style="color: #2F4F46; font-weight: 600;">Aqui, tudo começa com carinho e dedicação em família.  
+       Levamos até você o sabor do campo e a simplicidade que faz bem.  
+       Prove e sinta a diferença de um ovo caipira de verdade!</p>
+  </div>
+
+  <!-- História da empresa -->
+  <section id="historia">
+    <h2 style="color: #2F4F46; font-weight: bold;">A Inspiração por Trás da <em>Ovo di Onça</em></h2>
+    <p><span style= "color: #5A786F;"><strong><em>A Ovo di Onça</em></strong></span> nasceu em <strong>2021</strong> de um sonho que parecia pequeno, mas que já carregava muito significado. <strong>Eu (Fred)</strong>, com <strong>13 anos</strong> na época, sempre tive vontade de empreender — de construir algo meu, com as próprias mãos. A gente morava numa casa com quintal, e criar galinhas ali pra nossa família parecia uma boa ideia. Afinal, <em>ovo sempre foi um alimento presente no nosso dia a dia</em>: saudável, versátil e cheio de memória afetiva.</p>
+    <p>No começo, a intenção era simples: <strong>produzir só o que consumíamos</strong>. Mas um dia, andando pelo curral da fazenda, olhei aquele espaço com outros olhos. Pensei: <span style="color: #D29B32;"><em>“E se ampliássemos nossa criação de galinhas? E se outras famílias também pudessem desfrutar de ovos frescos e de alta qualidade como os nossos”</em></span> Chamei meu irmão <strong>Dudu</strong> pra embarcar nessa comigo — e ele topou na hora. <strong>Nossos pais abraçaram a ideia desde o início</strong>, sempre do nosso lado em cada passo.</p>
+    <p>Foi aí que nasceu a <strong style="color: #D29B32;">Ovo di Onça</strong>. O nome veio fácil, porque carrega muito da gente: <em>Onça de Pitangui</em>, cidade da nossa família, conhecida pelas histórias de mineração de ouro. E olha só: a <strong>gema alaranjada dos nossos ovos</strong> é tão intensa que lembra <span style="color: #D29B32; font-weight: bold;">ouro</span> mesmo! Um símbolo perfeito da <em>qualidade</em> que a gente sempre quis entregar.</p>
+    <p>Com <strong>martelo e madeira na mão</strong>, levantamos nosso primeiro galinheiro. Esperamos com ansiedade as primeiras galinhas chegarem, e a cada ovo colhido, a certeza crescia: <em>estávamos no caminho certo</em>. Fomos divulgando nossa marca, conquistando clientes, aprendendo, errando e melhorando — tudo com muito carinho e <strong>vontade de fazer bem feito</strong>.</p>
+    <p><strong>Hoje</strong>, seguimos com o mesmo propósito: <span style="color: #5A786F;">cuidar da nossa criação com responsabilidade, atender com respeito</span> e espalhar esse sentimento bom que é saber de onde vem aquilo que se coloca à mesa. A <strong style="color: #D29B32;">Ovo di Onça</strong> é <em>feita com amor, feita por nós — e feita pra você</em>.</p>
+  </section>
+
+  <!-- Propósito da marca -->
+  <section id="propósito">
+    <h2 style="color: #2F4F46; font-weight: bold;">Nosso Propósito: <em>Mais que um Simples Ovo</em></h2>
+    <p><span style="color: #5A786F;">Desde o início</span>, a gente sabia que não queria vender <em>“só ovo”</em>. Queríamos entregar <strong style="color: #D29B32;">confiança, cuidado e sabor</strong>. Porque quem já teve o prazer de experimentar um <strong>ovo caipira de verdade</strong>, com gema alaranjada e sabor marcante, sabe do que estamos falando.</p>
+    <p>O propósito da <strong style="color: #D29B32;">Ovo di Onça</strong> é valorizar o que é <em>natural</em>, <em>simples</em> e <em>feito com o coração</em>. A cada galinha criada solta, a cada ração sem química, a cada cliente feliz, a gente reforça aquilo que nos move: <span style="color: #5A786F;">mostrar que dá sim pra produzir com ética, com carinho e com qualidade</span>.</p>
+    <p>Não somos uma grande indústria, e nem queremos ser. Somos uma <strong style="color: #D29B32;">família</strong>, com os pés no chão e as mãos no trabalho. E é por isso que cada ovo que sai da nossa fazenda carrega um pedacinho da nossa história — e da nossa <em>verdade</em>.</p>
+  </section>
+
+  <!-- Características dos ovos -->  
+  <section id="ovos">
+      <h2>Qualidade e Sabor Incomparáveis</h2>
+      <p><strong>Os ovos caipiras Ovo di Onça</strong> são sinônimo de qualidade e sabor incomparáveis. Colhidos várias vezes ao dia, vêm de galinhas criadas soltas, livres de gaiolas, o que garante bem-estar animal e ovos mais nutritivos.</p>
+      <p>Nossas aves vivem livres para ciscar, expressando seu comportamento natural e se alimentando de vegetação verde, o que reflete diretamente na qualidade dos ovos.</p>
+      <p>A ração é cuidadosamente formulada com ingredientes <strong>100% naturais</strong>, sem antibióticos, hormônios ou aditivos químicos, resultando em um produto puro, saudável e cheio de sabor.</p>
+      <p>A <strong>gema alaranjada, densa e vibrante</strong> é o nosso selo de excelência — um verdadeiro tesouro nutritivo que lembra o ouro, símbolo do padrão Ovo di Onça.</p>
+    </section>
+    
+  <!-- Simulador de planos -->
+  <section id="simulador-planos">
+    <h2>Planos de Assinatura</h2>
+    <p>Escolha o plano ideal para sua rotina. Todos os planos incluem pentes com <strong>30 ovos caipiras</strong>, frescos e colhidos diariamente.</p>
+        
+    <div class="btn-container">
+    <button class="btn" onclick="mostrarPlano('semanal')"> <strong> Semanal </strong></button>
+    <button class="btn" onclick="mostrarPlano('quinzenal')">  <strong> Quinzenal </strong></button>
+    <button class="btn" onclick="mostrarPlano('mensal')"> <strong> Mensal </strong></button>
+    </div>
+        
+          <div id="info" class="info" style="margin-top: 20px; text-align: center; font-size: 16px;"></div>
+        </section>
+        <script>
+          function mostrarPlano(plano) {
+            const info = document.getElementById("info");
+            let texto = "";
+        
+            switch (plano) {
+              case "semanal":
+                texto = `
+                  <strong> Plano Semanal</strong><br>
+                  Receba ovos fresquinhos toda semana!<br><br>
+                  <strong>Valor:</strong> R$ 180,00 por mês <br>
+                  (equivale a 1 pente por semana - R$ 45,00 cada)<br>
+                  Cada pente contém <strong>30 ovos caipiras</strong>.
+                  <a href="https://wa.me/553125167561?text=Olá!%20Quero%20assinar%20o%20Plano%20Semanal." class="btn">Assinar pelo WhatsApp</a>
+                `;
+                break;
+              case "quinzenal":
+                texto = `
+                  <strong> Plano Quinzenal</strong><br>
+                  As entregas serão realizadas a cada 15 dias, ideal para consumo moderado.<br><br>
+                  <strong>Valor:</strong> R$ 90,00 por mês <br>
+                  (equivale a 1 pente a cada 15 dias - R$ 45,00 cada)<br>
+                  Cada pente contém <strong>30 ovos caipiras</strong>.
+                  <a href="https://wa.me/553125167561?text=Olá!%20Quero%20assinar%20o%20Plano%20Quinzenal." class="btn">Assinar pelo WhatsApp</a>
+                `;
+                break;
+              case "mensal":
+                texto = `
+                  <strong> Plano Mensal</strong><br>
+                  Receba uma entrega por mês, perfeito para pequenas famílias.<br><br>
+                  <strong>Valor:</strong> R$ 45,00 por pente <br>
+                  (equivale a 1 pente por mês)<br>
+                  Cada pente contém <strong>30 ovos caipiras</strong>.
+                  <a href="https://wa.me/553125167561?text=Olá!%20Quero%20assinar%20o%20Plano%20Mensal." class="btn">Assinar pelo WhatsApp</a>
+                `;
+                break;
+            }
+        
+            info.innerHTML = texto;
+            info.style.display = "block";
+          }
+        </script>
+
+<!-- Formas de pagamento -->
+    <section id="pagamento">
+        <h2>Formas de Pagamento</h2>
+        <p>Oferecemos duas opções práticas e seguras:</p>
+            <p><strong>PIX:</strong> Pagamento único via chave enviado após pedido. Cobramos mensalmente</p>
+            <p><strong>CARTÃO DE CRÉDITO:</strong> Link de assinatura recorrente com cobrança automática mensal.</p>
+      </section>
+      
+<!-- Informações sobre entrega -->
+      <section id="entrega">
+        <h2>Entrega Rápida e Segura</h2>
+        <p>As entregas são feitas conforme a frequência da sua assinatura:  
+           <strong>semanal, quinzenal ou mensal</strong>, sempre com pentes de 30 ovos frescos, colhidos há no máximo 7 dias.</p>
+        <p>Atendemos toda a região central de Belo Horizonte, além dos bairros Vila da Serra e Buritis.  
+           Está em outra região? Fale com a gente — vamos verificar com carinho se conseguimos entregar aí também.</p>
+      </section>   
+      
+<!--Duvidas frequentes-->
+<section class="faq-section">
+  <h2>Dúvidas Frequentes</h2>
+  <details>
+    <summary>A assinatura possui fidelidade ou carência?</summary>
+    <p>Sua satisfação é nossa prioridade. Por isso, nossas assinaturas não possuem fidelidade nem carência: você é livre para ficar conosco pelo tempo que desejar.</p>
+  </details>
+
+  <details>
+    <summary>Vou viajar, como faço?</summary>
+    <p>Sem preocupações! É só nos avisar com antecedência e pausaremos suas entregas até o seu retorno.</p>
+  </details>
+
+  <details>
+    <summary>O que acontece se vier um ovo com problema?</summary>
+    <p>Caso algum ovo apresente defeito, basta nos comunicar. A reposição será feita sem custo adicional na próxima entrega.</p>
+  </details>
+
+  <details>
+    <summary>Mudei de endereço, o que devo fazer?</summary>
+    <p>Entre em contato conosco informando o novo endereço para que possamos atualizar seus dados de entrega.</p>
+  </details>
+
+  <details>
+    <summary>Quero alterar meu plano. Como proceder?</summary>
+    <p>É simples! Basta nos chamar e solicitar a alteração desejada no seu plano de assinatura.</p>
+  </details>
+</section>
+
+<!-- Contato -->
+  <section id="contato">
+    <h2>Fale com a gente</h2>
+    <p>Dúvidas ou sugestões? Entre em contato:</p>
+    <div class="contato-btns">
+      <a href="https://api.whatsapp.com/send/?phone=%2B553125167561&text=Ol%C3%A1!+Tenho+interesse+em+participar+da+assinatura+de+ovos+caipira.+Poderia+me+passar+mais+informa%C3%A7%C3%B5es+por+favor%21&type=phone_number&app_absent=0&fbclid=PAY2xjawJZGJRleHRuA2FlbQIxMAABppt-UgtjrUNXj6EtGyvZaArA6qkpBipPuWO-YiMShIjdfJGR0GIh7O2Fkg_aem_fu0_Hy61hAF11m44vCw8aQ" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.instagram.com/ovodionca?igsh=cGV5eXl4N2lwOHNy" class="btn" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>      
+  </section>
+
+<!-- Receitas -->
+  <section id="receitas">
+    <h2>Receitas com Ovo Caipira</h2>
+    <p>Descubra formas deliciosas de usar nossos ovos fresquinhos no seu dia a dia!</p>
+    <div class="receitas-grid">
+      <div class="receita-card">
+        <h3>Ovo Cozido Perfeito</h3>
+        <button class="btn" onclick="mostrarReceita('ovo')">Ver Receita</button>
+      </div>
+      <div class="receita-card">
+        <h3>Omelete Caipira</h3>
+        <button class="btn" onclick="mostrarReceita('omelete')">Ver Receita</button>
+      </div>
+      <div class="receita-card">
+        <h3>Pavê de Ovomaltine</h3>
+        <button class="btn" onclick="mostrarReceita('pave')">Ver Receita</button>
+      </div>
+      <div class="receita-card">
+        <h3>Biscoito de Queijo da Família</h3>
+        <button class="btn" onclick="mostrarReceita('biscoito')">Ver Receita</button>
+      </div>
+      <div class="receita-card">
+        <h3>Bolo de Fubá</h3>
+        <button class="btn" onclick="mostrarReceita('bolo')">Ver Receita</button>
+      </div>
+    </div>
+  </section>
+  <div id="receita-detalhe">
+  <script>
+    function mostrarReceita(nome) {
+      const receitas = {
+        'ovo': `
+          <h2 style="text-align:center;">Ovo Cozido Perfeito</h2>
+          <p><strong>Ingredientes:</strong></p>
+          <ul>
+            <li>Ovos caipiras Ovo di Onça</li>
+            <li>Água suficiente para cobrir</li>
+          </ul>
+          <p><strong>Modo de preparo:</strong></p>
+          <ol>
+            <li>Coloque os ovos numa panela com água fria.</li>
+            <li>Leve ao fogo médio e conte 7 a 10 minutos após levantar fervura.</li>
+            <li>Desligue, resfrie com água fria e descasque com cuidado.</li>
+          </ol>
+        `,
+        'omelete': `
+          <h2 style="text-align:center;">Omelete Caipira</h2>
+          <p><strong>Ingredientes:</strong></p>
+          <ul>
+            <li>2 ovos caipira Ovo di Onça</li>
+            <li>1 pitada de sal</li>
+            <li>Queijo ralado e temperos a gosto</li>
+          </ul>
+          <p><strong>Modo de preparo:</strong></p>
+          <ol>
+            <li>Bata os ovos com os temperos.</li>
+            <li>Despeje em uma frigideira antiaderente untada.</li>
+            <li>Cozinhe em fogo baixo até firmar. Dobre e sirva!</li>
+          </ol>
+        `,
+        'pave': `
+          <h2 style="text-align:center;">Pavê de Ovomaltine</h2>
+          <p><strong>Ingredientes:</strong></p>
+          <ul>
+            <li>1 lata de leite condensado</li>
+            <li>1 colher de manteiga</li>
+            <li>2 gemas de ovo caipira Ovo di Onça</li>
+            <li>1/2 xícara de Ovomaltine</li>
+            <li>Bolacha maisena</li>
+          </ul>
+          <p><strong>Modo de preparo:</strong></p>
+          <ol>
+            <li>Cozinhe o leite condensado, manteiga e gemas até engrossar.</li>
+            <li>Monte camadas de creme e bolacha. Finalize com Ovomaltine.</li>
+            <li>Leve à geladeira por 4h. Sirva gelado.</li>
+          </ol>
+        `,
+        'biscoito': `
+          <h2 style="text-align:center;">Receita Biscoito de Queijo</h2>
+          <p><strong>Ingredientes:</strong></p>
+          <ul>
+            <li>1Kg de polvilho doce</li>
+            <li>1 copo de leite (240ml)</li>
+            <li>6 ovos caipira Ovo di Onça</li>
+            <li>200 a 250g de manteiga derretida</li>
+            <li>400g ou mais de queijo curado ralado</li>
+            <li>Sal a gosto</li>
+          </ul>
+          <p><strong>Modo de preparo:</strong></p>
+          <ol>
+            <li>Misture o polvilho e o leite com uma colher.</li>
+            <li>Adicione os ovos e a manteiga e misture com as mãos.</li>
+            <li>Acrescente o queijo e o sal. Amasse bem.</li>
+            <li>Se precisar, adicione mais leite até conseguir enrolar.</li>
+            <li>Enrole no formato desejado e leve ao forno pré-aquecido a 250°C por 30 min.</li>
+            <li>Depois abaixe para 200°C até dourar. Sirva quentinho!</li>
+          </ol>
+        `,
+        'bolo': `
+          <h2 style="text-align:center;">Bolo de Fubá</h2>
+          <p><strong>Ingredientes:</strong></p>
+          <ul>
+            <li>3 ovos caipira Ovo di Onça</li>
+            <li>1 e 1/2 xícara de açúcar</li>
+            <li>1/2 xícara de óleo</li>
+            <li>1 xícara de leite</li>
+            <li>2 xícaras de fubá</li>
+            <li>1 colher de fermento em pó</li>
+          </ul>
+          <p><strong>Modo de preparo:</strong></p>
+          <ol>
+            <li>Preaqueça o forno a 180°C.</li>
+            <li>Em uma tigela, bata os ovos, o açúcar e o óleo até obter uma mistura homogênea.</li>
+            <li>Adicione o leite e o fubá, misturando bem até a massa ficar homogênea.</li>
+            <li>Adicione o fermento e misture delicadamente até incorporar.</li>
+            <li>Despeje a massa em uma forma untada e asse por cerca de 40-50 minutos ou até que um palito inserido no centro saia limpo.</li>
+            <li>Retire do forno e deixe esfriar antes de servir.</li>
+          </ol>
+        `
+      };
+  
+      const div = document.getElementById('receita-detalhe');
+      const conteudoReceita = receitas[nome] || "<p>Receita não encontrada.</p>";
+  
+      div.innerHTML = `
+        <div style="text-align: center;">
+          <button class="btn" style="margin-bottom: 20px;" onclick="fecharReceita()">Fechar Receita</button>
+        </div>
+        ${conteudoReceita}
+      `;
+      div.style.display = 'block';
+      div.scrollIntoView({ behavior: "smooth" });
+    }
+  
+    function fecharReceita() {
+      const div = document.getElementById('receita-detalhe');
+      div.classList.add('fade-out'); // Adiciona a animação de saída
+  
+      // Espera a animação terminar antes de esconder
+      setTimeout(() => {
+        div.style.display = 'none';
+        div.classList.remove('fade-out'); // Remove classe para usar de novo na próxima vez
+        div.innerHTML = ''; // Limpa o conteúdo
+        window.scrollTo({ top: document.getElementById('receitas').offsetTop, behavior: "smooth" });
+      }, 500); // 500ms = duração da animação
+    }
+  </script>
+</div>
+  
+<footer>
+  <div class="footer-grid">
+
+    <div class="footer-column">
+      <h4>Localização</h4>
+      <p>Onça de Pitangui - MG</p>
+      <div class="map-container">
+       <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15022.305782811474!2d-44.81706465225751!3d-19.730648855811733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa742643291bd51%3A0x20265a82a0eec1b0!2sOn%C3%A7a%20de%20Pitangui%2C%20MG%2C%2035655-000!5e0!3m2!1spt-BR!2sbr!4v1746291322524!5m2!1spt-BR!2sbr" 
+          width="100%"
+          height="200"
+          class="footer-map"
+          style="border:0;" /* Estilo para remover a borda padrão do iframe */
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" /* Corrigido: referrerpolicy */
+          title="Mapa mostrando a localização da Ovo di Onça em Onça de Pitangui">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contato</h4>
+      <ul class="contact-list">
+        <li><i class="fas fa-phone" aria-hidden="true"></i> (31) 2516-7561</li>
+        <li><i class="fab fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/553125167561">WhatsApp</a></li>
+        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:ovodionca@gmail.com">ovodionca@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Assine Já</h4>
+      <a class="btn btn-subscribe" href="https://wa.me/553125167561?text=Olá!%20Gostaria%20de%20assinar%20ovos%20caipiras%20com%20a%20Ovo%20di%20Onça!">Assinar no WhatsApp</a>
+    </div>
+
+  </div> <div class="footer-copyright">
+    <p id="copyright">© <span id="current-year"></span> Ovo di Onça. Todos os direitos reservados.</p>
+  </div>
+
+  <script>
+    // Seleciona o elemento onde o ano será exibido
+    const yearSpan = document.getElementById('current-year');
+
+    // Verifica se o elemento foi encontrado no HTML
+    if (yearSpan) {
+      // Cria um objeto Date para pegar o ano atual
+      const currentYear = new Date().getFullYear();
+      // Atualiza o texto do elemento com o ano atual
+      yearSpan.textContent = currentYear;
+    } else {
+      // Se o elemento não for encontrado, exibe um aviso no console do navegador
+      console.warn('Elemento com ID "current-year" não encontrado.');
+    }
+  </script>
+
+</footer>
+
+</body>
+</html>
